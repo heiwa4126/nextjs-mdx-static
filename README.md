@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+```bash
+pnpm create next-app@latest nextjs-mdx --ts --use-pnpm --example app-dir-mdx
+```
+
 ## Getting Started
 
 First, run the development server:
