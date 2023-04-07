@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
-const basePath = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "./";
+let basePath = process.env.GITHUB_REPOSITORY?.split("/")[1];
+basePath = basePath ? "/" + basePath : "";
 const nextConfig = {
   output: "export",
   basePath,
@@ -9,10 +10,9 @@ const nextConfig = {
     mdxRs: true,
   },
 };
-// console.log("*****");
-// console.log(process.env);
-// console.log(nextConfig);
-// console.log("*****");
+console.log("*****");
+console.log(nextConfig);
+console.log("*****");
 
 const withMDX = require("@next/mdx")();
 module.exports = withMDX(nextConfig);
