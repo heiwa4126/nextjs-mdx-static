@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 let basePath = process.env.GITHUB_REPOSITORY?.split("/")[1];
-basePath = basePath ? "/" + basePath : "";
+basePath = basePath ? `/${basePath}` : "";
 const nextConfig = {
   output: "export",
   basePath,

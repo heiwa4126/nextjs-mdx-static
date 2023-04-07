@@ -11,7 +11,7 @@ export default function About() {
   return (
     <main>
       <Content />
-      <Link href="/">← back to home</Link>
+      <Link href="/index">← back to home</Link>
     </main>
   );
 }
