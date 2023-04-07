@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Content from "./message.mdx";
+import Counter from "../components/counter";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,6 +20,7 @@ export default function Home() {
           <Link href="/about">about</Link>
         </li>
       </ul>
+      <Counter />
     </main>
   );
 }
