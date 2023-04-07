@@ -9,6 +9,7 @@ const nextConfig = {
   env: {
     basePath,
   },
+  //trailingSlash: true,
   experimental: {
     appDir: true,
     mdxRs: true,
