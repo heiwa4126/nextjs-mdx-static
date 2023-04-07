@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
+const basePath = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "./";
 const nextConfig = {
   output: "export",
-  basePath: process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "./",
+  basePath,
+  assetPrefix: basePath,
   experimental: {
     appDir: true,
     mdxRs: true,
