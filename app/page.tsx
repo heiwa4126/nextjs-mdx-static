@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "../components/link";
 import Image from "next/image";
 import Content from "./message.mdx";
 import Counter from "../components/counter";

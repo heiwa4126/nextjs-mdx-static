@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Link from "../../components/link";
 import Image from "next/image";
-import BackHome from "../../components/backhome";
 import utilStyles from "../../styles/utils.module.css";
 import Content from "./content.mdx";
 
@@ -16,7 +16,7 @@ export default function About() {
     <main>
       <Image priority src={`${basePath}/images/profile.jpg`} className={utilStyles.borderCircle} height={108} width={108} alt="small profile image" />
       <Content />
-      <BackHome />
+      <Link href="/">← back to home</Link>
     </main>
   );
 }

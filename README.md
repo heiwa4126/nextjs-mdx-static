@@ -63,6 +63,11 @@ Error: Image Optimization using the default loader is not compatible with `{ out
 
 と言われるので `unoptimized: true` にしてみた。
 
+## basePath問題
+
+next/imageやnext/linkをラップしたコンポーネントを作らないと
+ダメな模様(いまのところ)。
+
 
 ## TODO
 
