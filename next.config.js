@@ -7,6 +7,10 @@ const nextConfig = {
     mdxRs: true,
   },
 };
+console.log("*****");
+console.log(process.env);
+console.log(nextConfig);
+console.log("*****");
 
 const withMDX = require("@next/mdx")();
 module.exports = withMDX(nextConfig);
