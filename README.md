@@ -45,13 +45,27 @@ https://heiwa4126.github.io/nextjs-mdx-static/
    - Settings -> Environments -> Deployment branchesにgh-pagesを追加
 - `.github\workflows\pages.yml` を書く。
 - next.config.js で `basePath`と`assetPrefix`を設定する。
-- `/`に戻るリンクは `<Link href="/index>` にする。
+- `/`に戻るリンクは `<Link href="/index>` にする。⇒ これ `npm run dev` のときうまく動かない。すこし考える。
 
 これでとりあえず動く。
+
+## Image
+
+`<Image>`を使うと
+
+```
+Error: Image Optimization using the default loader is not compatible with `{ output: 'export' }`.
+  Possible solutions:
+    - Remove `{ output: 'export' }` and run "next start" to run server mode including the Image Optimization API.
+    - Configure `{ images: { unoptimized: true } }` in `next.config.js` to disable the Image Optimization API.
+  Read more: https://nextjs.org/docs/messages/export-image-api
+```
+
+と言われるので `unoptimized: true` にしてみた。
 
 
 ## TODO
 
-- 画像があると/_next以下どうなるかを確認。
+- 画像があると/_next以下どうなるかを確認。⇒ やった。上記参照
 - SSGがあるとどうなるかをテスト。build時にエラーになる?
 - GitHub Pagesを試してみる。⇒ やった。上記参照
