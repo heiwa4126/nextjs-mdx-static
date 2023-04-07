@@ -32,8 +32,26 @@ Reactの超簡単なコンポーネント含む(そこだけCSR)。
 - index.html と about.html が実際に出来るので、SPAではない。各々がSPA
 
 
-## Todo
+## GitHub Pages
+
+gh-pagesブランチにpushすると
+https://heiwa4126.github.io/nextjs-mdx-static/
+にデプロイされる。
+
+要点は以下の通り:
+
+- GitHubの設定で
+   - Settings -> Pages -> Source -> GitHub Actions
+   - Settings -> Environments -> Deployment branchesにgh-pagesを追加
+- `.github\workflows\pages.yml` を書く。
+- next.config.js で `basePath`と`assetPrefix`を設定する。
+- `/`に戻るリンクは `<Link href="/index>` にする。
+
+これでとりあえず動く。
+
+
+## TODO
 
 - 画像があると/_next以下どうなるかを確認。
 - SSGがあるとどうなるかをテスト。build時にエラーになる?
-- GitHub Pagesを試してみる。
+- GitHub Pagesを試してみる。⇒ やった。上記参照
