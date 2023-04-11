@@ -26,6 +26,7 @@ export default function Home() {
         </li>
       </ul>
       <Counter />
+      <Counter initialValue={10} />
     </main>
   );
 }
