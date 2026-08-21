@@ -18,7 +18,6 @@ pnpm create next-app@latest nextjs-mdx-static --ts --use-pnpm --example app-dir-
 から始めていろいろ削ったもの。
 Reactの超簡単なコンポーネント含む(そこだけCSR)。
 
-
 ## 手順
 
 1. app dirで作る。
@@ -31,7 +30,6 @@ Reactの超簡単なコンポーネント含む(そこだけCSR)。
 
 - index.html と about.html が実際に出来るので、SPAではない。各々がSPA
 
-
 ## GitHub Pages
 
 gh-pagesブランチにpushすると
@@ -41,8 +39,8 @@ https://heiwa4126.github.io/nextjs-mdx-static/
 要点は以下の通り:
 
 - GitHubの設定で
-   - Settings -> Pages -> Source -> GitHub Actions
-   - Settings -> Environments -> Deployment branchesにgh-pagesを追加
+  - Settings -> Pages -> Source -> GitHub Actions
+  - Settings -> Environments -> Deployment branchesにgh-pagesを追加
 - `.github\workflows\pages.yml` を書く。
 - next.config.js で `basePath`と`assetPrefix`を設定する。
 - `/`に戻るリンクは `<Link href="/index>` にする。⇒ これ `npm run dev` のときうまく動かない。すこし考える。
@@ -68,9 +66,8 @@ Error: Image Optimization using the default loader is not compatible with `{ out
 next/imageやnext/linkをラップしたコンポーネントを作らないと
 ダメな模様(いまのところ)。
 
-
 ## TODO
 
-- 画像があると/_next以下どうなるかを確認。⇒ やった。上記参照
+- 画像があると/\_next以下どうなるかを確認。⇒ やった。上記参照
 - SSGがあるとどうなるかをテスト。build時にエラーになる?
 - GitHub Pagesを試してみる。⇒ やった。上記参照
